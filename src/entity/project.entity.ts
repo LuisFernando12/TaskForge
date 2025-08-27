@@ -1,9 +1,11 @@
 import {
   Column,
+  CreateDateColumn,
   Entity,
   ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 import { User } from './user.entity';
 import { Task } from './task.entity';
@@ -20,13 +22,12 @@ export class Project {
   description: string;
   @Column({ name: 'board_url' })
   boardUrl: string;
-  @Column({
+  @CreateDateColumn({
     name: 'created_at',
     type: 'timestamp',
-    default: new Date().toISOString(),
   })
   createdAt: Date;
-  @Column({ name: 'updated_at', type: 'timestamp' })
+  @UpdateDateColumn({ name: 'updated_at', type: 'timestamp' })
   updateAt: Date;
   @OneToMany(() => Task, (task) => task.project)
   tasks: Task[];

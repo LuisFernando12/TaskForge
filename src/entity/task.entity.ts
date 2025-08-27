@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Project } from './project.entity';
 
 @Entity()
@@ -13,9 +19,8 @@ export class Task {
   description: string;
   @Column()
   status: string;
-  @Column({
+  @CreateDateColumn({
     name: 'created_at',
-    default: new Date().toISOString(),
     type: 'timestamp',
   })
   createdAt: Date;

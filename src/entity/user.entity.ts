@@ -1,4 +1,11 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Project } from './project.entity';
 
 @Entity()
@@ -13,13 +20,16 @@ export class User {
   password: string;
   @Column({ name: 'token_trello' })
   trelloToken: string;
-  @Column({
+  @CreateDateColumn({
     name: 'created_at',
     type: 'timestamp',
-    default: new Date().toISOString(),
   })
   createdAt: Date;
-  @Column({ name: 'update_at', type: 'timestamp', nullable: true })
+  @UpdateDateColumn({
+    name: 'update_at',
+    type: 'timestamp',
+    nullable: true,
+  })
   updatedAt: Date;
   @OneToMany(() => Project, (project) => project.user)
   projects: Project[];
