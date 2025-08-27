@@ -19,7 +19,7 @@ export class User {
     default: new Date().toISOString(),
   })
   createdAt: Date;
-  @Column({ name: 'update_at', type: 'timestamp' })
+  @Column({ name: 'update_at', type: 'timestamp', nullable: true })
   updatedAt: Date;
   @OneToMany(() => Project, (project) => project.user)
   projects: Project[];
