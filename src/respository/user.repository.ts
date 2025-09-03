@@ -30,6 +30,13 @@ export class UserRepository implements IRepository<User> {
       throw new InternalServerErrorException(error.message);
     }
   }
+  public async findByEmail(email: string) {
+    try {
+      return this.repository.findOne({ where: { email: email } });
+    } catch (error) {
+      throw new InternalServerErrorException(error.message);
+    }
+  }
   public async update(data: User, id: number) {
     try {
       return this.repository.update(id, data);

@@ -1,14 +1,18 @@
 import { Module } from '@nestjs/common';
-import { AppController } from '../controller/app.controller';
-import { AppService } from '../service/app.service';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from 'src/entity/user.entity';
 import { Project } from 'src/entity/project.entity';
 import { Task } from 'src/entity/task.entity';
+import { User } from 'src/entity/user.entity';
+import { AppController } from '../controller/app.controller';
+import { Token } from '../entity/token.entity';
+import { AppService } from '../service/app.service';
+import { AuthModule } from './auth.module';
 import { UserModule } from './user.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -16,10 +20,11 @@ import { UserModule } from './user.module';
       username: 'postgres',
       password: 'postgres',
       database: 'task_forge',
-      entities: [User, Project, Task],
+      entities: [User, Project, Task, Token],
       synchronize: true,
     }),
     UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

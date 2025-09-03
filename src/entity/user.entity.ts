@@ -3,10 +3,12 @@ import {
   CreateDateColumn,
   Entity,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { Project } from './project.entity';
+import { Token } from './token.entity';
 
 @Entity()
 export class User {
@@ -33,4 +35,6 @@ export class User {
   updatedAt: Date;
   @OneToMany(() => Project, (project) => project.user)
   projects: Project[];
+  @OneToOne(() => Token, (token) => token.user, { cascade: true })
+  token: Token;
 }
