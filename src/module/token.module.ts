@@ -14,7 +14,7 @@ import { TokenService } from '../service/token.service';
         global: true,
         secret: config.get('SECRET'),
         signOptions: {
-          expiresIn: '60s',
+          expiresIn: '15m',
         },
       }),
     }),

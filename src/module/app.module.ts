@@ -8,6 +8,7 @@ import { AppController } from '../controller/app.controller';
 import { Token } from '../entity/token.entity';
 import { AppService } from '../service/app.service';
 import { AuthModule } from './auth.module';
+import { ProjectModule } from './project.module';
 import { UserModule } from './user.module';
 
 @Module({
@@ -25,6 +26,7 @@ import { UserModule } from './user.module';
     }),
     UserModule,
     AuthModule,
+    ProjectModule,
   ],
   controllers: [AppController],
   providers: [AppService],

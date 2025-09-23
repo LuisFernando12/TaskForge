@@ -15,4 +15,3 @@ services:
       - task-forge-network
     volumes:
       - ./data:/bitnami/postgresql
-    
