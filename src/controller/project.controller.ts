@@ -1,4 +1,12 @@
-import { Body, Controller, Post, Request, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+  Request,
+  UseGuards,
+} from '@nestjs/common';
 import { AuthGuard } from '../guard/auth.guard';
 import { IProject } from '../service/ai.service';
 import { ProjectService } from '../service/project.service';
@@ -24,5 +32,11 @@ export class ProjectController {
     const userId = req.user?.sub;
     const board = await this.projectService.createBoardProject(userId, project);
     return board;
+  }
+  @Get('/:id')
+  async getProject(@Param('id') id: number, @Request() req) {
+    const userId = req.user?.sub;
+    const project = this.projectService.getProject(id, userId);
+    return project;
   }
 }

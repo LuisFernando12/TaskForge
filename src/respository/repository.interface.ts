@@ -1,7 +1,7 @@
 export interface IRepository<T> {
-  save(data: Omit<T, 'id' | 'createdAt' | 'updatedAt'>): void;
-  findById(id: number): void;
-  findAll(): void;
+  save(data: Omit<T, 'id' | 'createdAt' | 'updatedAt'>): Promise<T>;
+  findById(id: number): Promise<T>;
+  findAll(): Promise<T[]>;
   update(
     data: Partial<Omit<T, 'id' | 'createdAt' | 'updatedAt'>>,
     id: number,

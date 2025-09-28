@@ -5,14 +5,15 @@ import OpenAI from 'openai';
 export interface IProject {
   project: string;
   level: string;
+  description: string;
   epics: IEpics;
 }
-interface IEpics {
+export interface IEpics {
   title: string;
   stories: IStory[];
 }
 
-interface IStory {
+export interface IStory {
   title: string;
   acceptance_criteria: string[];
   tasks: string[];
@@ -53,6 +54,7 @@ export class AIService {
       {
         "project": "Título do Projeto",
         "level": "iniciante | avançado",
+        "description": " descrição de explicação do projeto";
         "epics": [
           {
             "title": "Nome do épico",
