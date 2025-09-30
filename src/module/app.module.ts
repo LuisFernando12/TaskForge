@@ -4,11 +4,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Project } from 'src/entity/project.entity';
 import { Task } from 'src/entity/task.entity';
 import { User } from 'src/entity/user.entity';
-import { AppController } from '../controller/app.controller';
 import { Epic } from '../entity/epic.entity';
 import { Story } from '../entity/story.entity';
 import { Token } from '../entity/token.entity';
-import { AppService } from '../service/app.service';
 import { AuthModule } from './auth.module';
 import { ProjectModule } from './project.module';
 import { UserModule } from './user.module';
@@ -33,7 +31,5 @@ import { UserModule } from './user.module';
     AuthModule,
     ProjectModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

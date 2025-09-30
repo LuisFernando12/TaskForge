@@ -1,0 +1,10 @@
+#Local Env Files
+.env
+#
+node_modules
+npm-debug.log
+yarn-error.log
+.git
+.cache
+dist
+compose.yaml
