@@ -8,6 +8,7 @@ async function bootstrap() {
     .setTitle('Task Forge API')
     .setDescription('Task Forge api documentation')
     .setVersion('v1.0')
+    .addBearerAuth()
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, documentFactory);
