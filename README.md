@@ -1,73 +1,99 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# 🌍 TaskForge Documentation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<details open>
+<summary>🇺🇸 English</summary>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Overview
 
-## Description
+TaskForge is a scalable tool built with **NestJS** & **TypeScript**, aimed at automating task and project management flows. It is fully containerized and designed for modern development workflows.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Repository Structure
 
-## Installation
-
-```bash
-$ pnpm install
+```
+.
+├── src/                
+├── test/               
+├── Dockerfile          
+├── compose.yaml        
+├── package.json        
+└── tsconfig.json       
 ```
 
-## Running the app
+### Features
+
+* ⚡ Modular architecture
+* 🔒 Secure authentication
+* 🐳 Containerized deployment
+* 📦 API-first design
+* ✅ Linting & formatting
+
+### Installation & Execution
 
 ```bash
-# development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+pnpm install
+pnpm run start:dev
+pnpm run start:prod
 ```
 
-## Test
+### Docker & Deployment
 
 ```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
+docker build -t taskforge .
+docker compose up -d
 ```
 
-## Support
+### License
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+MIT
 
-## Stay in touch
+</details>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+<details>
+<summary>🇧🇷 Português</summary>
 
-Nest is [MIT licensed](LICENSE).
+### Visão Geral
+
+TaskForge é uma ferramenta escalável construída com **NestJS** & **TypeScript**, focada em automatizar fluxos de gerenciamento de tarefas e projetos. O projeto é totalmente containerizado e segue boas práticas modernas.
+
+### Estrutura do Repositório
+
+```
+.
+├── src/                
+├── test/               
+├── Dockerfile          
+├── compose.yaml        
+├── package.json        
+└── tsconfig.json       
+```
+
+### Funcionalidades
+
+* ⚡ Arquitetura modular
+* 🔒 Autenticação segura
+* 🐳 Deploy containerizado
+* 📦 API-first
+* ✅ Linting & formatação
+
+### Instalação & Execução
+
+```bash
+pnpm install
+pnpm run start:dev
+pnpm run start:prod
+```
+
+### Docker & Implantação
+
+```bash
+docker build -t taskforge .
+docker compose up -d
+```
+
+### Licença
+
+MIT
+
+</details>
